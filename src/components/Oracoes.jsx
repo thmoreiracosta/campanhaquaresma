@@ -63,7 +63,7 @@ export default function Oracoes({ openModal }) {
             </p>
           </a>
           <a
-            href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXBJd1l2bnhlRmk5ZlNrN0VEQjRmanNrdkNxZ3xBQ3Jtc0tsbXVRVk91dVNONFBOYXh1MUxCX3c0TkRPOVM0aXpPTWx1MlZqQjhzS2JfMXd3alVMQ1lya3I3dWNrak1nUXR5TFdaVWxsZkJDYU4yMGp5MDEySzBCOHBWN0J6Y1A3UzhWS24wZlg3Nkc2Qm9DYjlKWQ&q=https%3A%2F%2Fs3.sa-east-1.amazonaws.com%2Farquivos.padrepauloricardo.org%2Fuploads%2Fanexo%2Farquivo%2F4290%2Fmanual-de-confissao.pdf&v=fdzgelJ7Ctg"
+            href="https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center w-40"
