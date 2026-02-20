@@ -1,0 +1,53 @@
+import { useState } from 'react'
+import Navigation from './components/Navigation'
+import Hero from './components/Hero'
+import Meditacao from './components/Meditacao'
+import Oracoes from './components/Oracoes'
+import Sobre from './components/Sobre'
+import Footer from './components/Footer'
+import Modal from './components/Modal'
+import AudioButton from './components/AudioButton'
+
+export default function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalContent, setModalContent] = useState(null)
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({ behavior: 'smooth' })
+    setMobileMenuOpen(false)
+  }
+
+  const openModal = (key) => {
+    setModalContent(key)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+  }
+  
+
+  return (
+    <div className="checkered-bg text-gray-900 font-crimson min-h-screen flex flex-col">
+      <Navigation 
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+        scrollToSection={scrollToSection}
+        openModal={openModal}
+      />
+      
+      <main className="flex-1">
+        <Hero scrollToSection={scrollToSection} openModal={openModal} />
+        <Meditacao openModal={openModal} />
+        <Oracoes openModal={openModal} />
+        <Sobre scrollToSection={scrollToSection} openModal={openModal} />
+      </main>
+
+      <Footer scrollToSection={scrollToSection} openModal={openModal} />
+      <AudioButton />
+      <Modal isOpen={modalOpen} onClose={closeModal} contentKey={modalContent} />
+    </div>
+  )
+}
