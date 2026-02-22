@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 
 export default function Footer({ scrollToSection, openModal }) {
   const shareUrl = window.location.href;
-  const shareText = "Participe da Campanha da Quaresma 2026: 'Mestre, onde moras?' — 'Vinde e vede.' (Jo 1,38-39) ✝️🙏";
+  const shareText =
+    "Participe da Campanha da Quaresma 2026: 'Mestre, onde moras?' — 'Vinde e vede.' (Jo 1,38-39) ✝️🙏";
 
   const shareWhatsApp = () => {
     window.open(
@@ -29,12 +30,16 @@ export default function Footer({ scrollToSection, openModal }) {
     );
   };
 
+  // NOVO: subir topo
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const navSections = [
-    { name: "Formações", id: "formacoes" },
+    { name: "Formações", id: "formacao" },
     { name: "Download", id: "download" },
     { name: "Orações", id: "oracoes" },
     { name: "Sobre", id: "sobre" },
-    { name: "Apoie", id: "apoie" },
   ];
 
   const resources = [
@@ -89,6 +94,24 @@ export default function Footer({ scrollToSection, openModal }) {
         </svg>
       ),
     },
+    // NOVO BOTÃO SUBIR TOPO
+    // dentro do array socialLinks
+    {
+      name: "Topo",
+      action: scrollToTop,
+      color: "rose",
+      svg: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          className="w-5 h-5"
+        >
+          <path d="M12 4l-8 8h5v8h6v-8h5z" />
+        </svg>
+      ),
+      hoverClass: "hover:bg-rose-500 hover:shadow-lg",
+    },
   ];
 
   return (
@@ -106,10 +129,26 @@ export default function Footer({ scrollToSection, openModal }) {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <svg className="w-8 h-8" viewBox="0 0 100 100">
-                <rect x="40" y="10" width="20" height="80" rx="5" fill="#C9A227" />
-                <rect x="10" y="40" width="80" height="20" rx="5" fill="#C9A227" />
+                <rect
+                  x="40"
+                  y="10"
+                  width="20"
+                  height="80"
+                  rx="5"
+                  fill="#C9A227"
+                />
+                <rect
+                  x="10"
+                  y="40"
+                  width="80"
+                  height="20"
+                  rx="5"
+                  fill="#C9A227"
+                />
               </svg>
-              <span className="cinzel font-bold text-lg sm:text-xl">Quaresma 2026</span>
+              <span className="cinzel font-bold text-lg sm:text-xl">
+                Quaresma 2026
+              </span>
             </div>
             <p className="text-white text-sm sm:text-base opacity-80 leading-snug">
               Vivendo autenticamente o tempo quaresmal.
@@ -124,7 +163,9 @@ export default function Footer({ scrollToSection, openModal }) {
                 <li key={sec.id}>
                   <button
                     onClick={() => scrollToSection(sec.id)}
-                    className="hover:text-rose-300 transition-colors duration-300"
+                    className="relative text-white/90 font-medium text-base sm:text-lg 
+                     after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-0 after:bg-rose-300 
+                     after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {sec.name}
                   </button>
@@ -141,7 +182,9 @@ export default function Footer({ scrollToSection, openModal }) {
                 <li key={res.modal}>
                   <button
                     onClick={() => openModal(res.modal)}
-                    className="hover:text-rose-300 transition-colors duration-300"
+                    className="relative text-white/90 font-medium text-base sm:text-lg 
+                     after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-0 after:bg-rose-300 
+                     after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {res.name}
                   </button>
@@ -159,7 +202,11 @@ export default function Footer({ scrollToSection, openModal }) {
                   key={social.name}
                   onClick={social.action}
                   whileHover={{ scale: 1.15 }}
-                  className={`w-11 h-11 bg-white/10 rounded-lg flex items-center justify-center transition-colors duration-300 hover:bg-${social.color}-600`}
+                  className={`w-11 h-11 bg-white/10 rounded-lg flex items-center justify-center transition-colors duration-300 ${
+                    social.hoverClass
+                      ? social.hoverClass
+                      : `hover:bg-${social.color}-600`
+                  }`}
                   title={social.name}
                 >
                   {social.svg}

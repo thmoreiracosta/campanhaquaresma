@@ -59,18 +59,13 @@ export default function SponsorGrid({ apoiadores }) {
                 opacity-0 group-hover:opacity-100
                 transition duration-300 whitespace-nowrap"
               >
-                <span
-                  className="text-xs bg-white text-purple-900 
-                   px-3 py-1.5 rounded-md shadow-md font-medium"
-                >
-                  Seguir no Instagram
-                </span>
+                
               </div>
             </div>
 
             <span
-              className="mt-4 font-cinzel text-sm text-purple-900
-                             opacity-80 group-hover:text-rose-liturgy
+              className="mt-2 font-cinzel text-sm text-black
+                             group-hover:text-rose-800
                              transition-all duration-300 text-center"
             >
               {apoiador.name}
