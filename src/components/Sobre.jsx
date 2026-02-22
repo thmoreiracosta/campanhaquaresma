@@ -1,5 +1,3 @@
-
-
 export default function Sobre({ openModal }) {
   return (
     <section id="sobre" className="py-12 sm:py-20 px-4">
@@ -18,7 +16,7 @@ export default function Sobre({ openModal }) {
             <h3 className="cinzel text-2xl sm:text-3xl font-bold mb-6 text-rose-500">
               O que é a Campanha da Quaresma?
             </h3>
-            <div className="space-y-4 text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed">
+            <div className="space-y-4 text-gray-800 text-base sm:text-lg md:text-xl leading-relaxed">
               <p>
                 A <strong>Campanha da Quaresma</strong> é uma iniciativa
                 católica que resgata o verdadeiro sentido do tempo quaresmal:{" "}
@@ -78,8 +76,6 @@ export default function Sobre({ openModal }) {
             ))}
           </div>
         </div>
-
-        
       </div>
     </section>
   );
