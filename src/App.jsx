@@ -3,7 +3,9 @@ import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Meditacao from './components/Meditacao'
 import Oracoes from './components/Oracoes'
+import LentenSubsidies from './components/LentenSubsidies'
 import Sobre from './components/Sobre'
+import Partners from './components/Partners'
 import Footer from './components/Footer'
 import Modal from './components/Modal'
 import AudioButton from './components/AudioButton'
@@ -41,8 +43,10 @@ export default function App() {
       <main className="flex-1">
         <Hero scrollToSection={scrollToSection} openModal={openModal} />
         <Meditacao openModal={openModal} />
+        <LentenSubsidies openModal={openModal} />
         <Oracoes openModal={openModal} />
         <Sobre scrollToSection={scrollToSection} openModal={openModal} />
+        <Partners scrollToSection={scrollToSection} openModal={openModal} />
       </main>
 
       <Footer scrollToSection={scrollToSection} openModal={openModal} />

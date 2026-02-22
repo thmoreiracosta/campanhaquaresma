@@ -9,12 +9,9 @@ export default function Hero({ scrollToSection, openModal }) {
           <img className="w-24 sm:w-36 h-24 sm:h-36 mx-auto text-purple-900" src={logo} alt="" />
         </div>
         
-        <p className="text-purple-900 text-xl sm:text-2xl md:text-3xl tracking-widest uppercase mb-4 fade-in delay-1 cinzel font-semibold">Campanha da Quaresma</p>
-        
-        <h1 className="cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in delay-2 text-purple-900">"Mestre, onde moras?"</h1>
-        
-        <p className="text-2xl sm:text-3xl md:text-4xl text-rose-500 font-cinzel mb-4 fade-in delay-3 font-semibold">"Vinde e vede"</p>
-        
+        <p className="text-purple-900 text-xl sm:text-2xl md:text-3xl tracking-widest uppercase mb-4 fade-in delay-1 cinzel font-semibold">Campanha da Quaresma</p>        
+        <h1 className="cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in delay-2 text-purple-900">"Mestre, onde moras?"</h1>        
+        <p className="text-2xl sm:text-3xl md:text-4xl text-rose-500 font-cinzel mb-4 fade-in delay-3 font-semibold">"Vinde e vede"</p>        
         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 fade-in delay-3 cinzel"><em>Jo 1, 38-39</em></p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in delay-3">

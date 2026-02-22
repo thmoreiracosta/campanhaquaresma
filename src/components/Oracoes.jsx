@@ -1,82 +1,18 @@
-import dores from "../assets/dores.png";
-import viaSacra from "../assets/via-sacra.png";
-import cquaresma from "../assets/cquaresma.png";
-import confissao from "../assets/confissao.png";
 export default function Oracoes({ openModal }) {
   return (
     <section id="oracoes" className="py-12 sm:py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
+          <span className="text-center mb-16 text-rose-500 text-sm tracking-widest uppercase">
+            Vida de Oração
+          </span>
           <h2 className="cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-purple-900">
-            Subsídios Quaresmais
+            Orações Quaresmais
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-base sm:text-lg md:text-xl">
-            Material para download e orações. Prepare-se para sua caminhada
-            penitencial diária.
+            Orações tradicionais da Igreja para nutrir sua vida espiritual
+            durante este tempo santo.
           </p>
-        </div>
-
-        <div className="flex justify-center gap-12 mb-12 flex-wrap">
-          <a
-            href="https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-rose-liturgy"
-              src={dores}
-              alt="Ebook Meditação as dores de Nossa Senhora"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              As Dores de Nossa Senhora
-            </p>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-rose-liturgy"
-              src={viaSacra}
-              alt="Ebook Via-Sacra"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              Via-Sacra
-            </p>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1DVaRmkVqy-cMLEjGF7V6GhrM_KD3KI7m/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-rose-liturgy"
-              src={cquaresma}
-              alt="Ebook Meditação as dores de Nossa Senhora"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              Meditações
-            </p>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-rose-liturgy"
-              src={confissao}
-              alt="Ebook Manual de Confissão"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              Manual de Confissão
-            </p>
-          </a>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8">

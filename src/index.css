@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,22 +8,24 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Crimson Pro', serif;
+  font-family: "Crimson Pro", serif;
 }
 
 .cinzel {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
 }
 
 .cross-overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -53,7 +55,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #D4789C, #4A1A6B);
+  background: linear-gradient(135deg, #d4789c, #4a1a6b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +74,8 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 8px 24px rgba(74, 26, 107, 0.3);
   }
   50% {
@@ -85,7 +88,7 @@ body {
   font-weight: bold;
   margin-top: 6px;
   text-align: center;
-  color: #4A1A6B;
+  color: #4a1a6b;
   line-height: 1.2;
 }
 
@@ -98,6 +101,17 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 .fade-in {
@@ -125,13 +139,13 @@ body {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #D4789C, #C9A227);
+  background: linear-gradient(90deg, #d4789c, #c9a227);
   transition: width 0.3s;
 }
 
