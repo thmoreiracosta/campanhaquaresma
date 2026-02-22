@@ -58,19 +58,19 @@ export default function Oracoes({ openModal }) {
                     <h3 className="cinzel text-lg sm:text-2xl font-bold text-purple-900">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 font-semibold text-xs sm:text-sm">
+                    <p className="text-gray-600 font-semibold text-sm sm:text-lg">
                       {item.sub}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-800 text-sm sm:text-lg">{item.desc}</p>
+                <p className="text-gray-800 text-sm sm:text-2xl">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-purple-300/20 shadow-md">
-          <h3 className="cinzel text-xl sm:text-2xl font-bold mb-6 text-center text-purple-900">
+          <h3 className="cinzel text-xl sm:text-3xl font-bold mb-6 text-center text-purple-900">
             Orações Breves
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
@@ -107,10 +107,10 @@ export default function Oracoes({ openModal }) {
                 onClick={() => openModal(item.key)}
                 className="p-4 bg-gray-50 rounded-lg hover:bg-purple-100/40 transition-all text-left border border-gray-200"
               >
-                <span className="font-bold text-base sm:text-lg text-purple-900">
+                <span className="font-bold text-base sm:text-xl text-purple-900">
                   {item.title}
                 </span>
-                <p className="text-gray-600 text-xs sm:text-sm">{item.desc}</p>
+                <p className="text-gray-600 text-xs sm:text-lg">{item.desc}</p>
               </button>
             ))}
           </div>
