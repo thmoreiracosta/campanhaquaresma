@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Footer({ scrollToSection, openModal }) {
   const shareUrl = window.location.href;
-  const shareText = "Vivendo intensamente a Quaresma 2026.";
+  const shareText = "Participe da Campanha da Quaresma 2026: 'Mestre, onde moras?' — 'Vinde e vede.' (Jo 1,38-39) ✝️🙏";
 
   const shareWhatsApp = () => {
     window.open(
