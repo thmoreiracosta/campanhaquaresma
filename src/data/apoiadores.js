@@ -3,9 +3,21 @@ import logoLepanto from "../assets/LOGO LEPANTO - BG Vermelho.png";
 import logoPF from "../assets/logo-progredirnafe.png";
 import logoNCS from "../assets/logo-nacomunhaodossantos.png";
 import logoECV from "../assets/logo-evangelizandocomvc.png";
+import logoLSJ from "../assets/logo-lojinha2.png";
+import logoRTC from "../assets/logo-RTC.png";
+import logoEscravo from "../assets/logo-escravo.png";
+import logoTeofilos from "../assets/logo-teofilos.png";
+import logoFotoSacra from "../assets/logo-fotosacra.png";
+import logoEducarParaCeu from "../assets/logo-educarparaceu.png";
 
 
 export const apoiadores = [
+  {
+    id: 11,
+    name: "Educar para o céu",
+    image: logoEducarParaCeu,
+    instagram: "https://www.instagram.com/educarparaoceu/",
+  },
   {
     id: 1,
     name: "Ateliê Caritas Christi",
@@ -35,5 +47,35 @@ export const apoiadores = [
     name: "Evangelizando com Você",
     image: logoECV,
     instagram: "https://www.instagram.com/evangelizandocomvoce",
+  },
+  {
+    id: 6,
+    name: "Lojinha São José",
+    image: logoLSJ,
+    instagram: "https://www.instagram.com/lojinha.sao.jose",
+  },
+  {
+    id: 7,
+    name: "Renovação Tradismática Católica",
+    image: logoRTC,
+    instagram: "https://www.instagram.com/brasil.rtc",
+  },
+  {
+    id: 8,
+    name: "Flávio Escravo de Maria",
+    image: logoEscravo,
+    instagram: "https://www.instagram.com/flavio_escravodemariaoficial",
+  },
+  {
+    id: 9,
+    name: "Teófilos",
+    image: logoTeofilos,
+    instagram: "https://www.instagram.com/teofilosoficial",
+  },
+  {
+    id: 10,
+    name: "Lente Sacra Fotografia Religiosa",
+    image: logoFotoSacra,
+    instagram: "https://www.instagram.com/lentesacrafotografia",
   },
 ];
