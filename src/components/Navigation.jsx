@@ -43,16 +43,16 @@ export default function Navigation({
               Orações
             </button>
             <button
-              onClick={() => scrollToSection("partners")}
-              className="nav-link text-white/90 hover:text-rose-300 font-medium text-lg"
-            >
-              Parceiros
-            </button>
-            <button
               onClick={() => scrollToSection("sobre")}
               className="nav-link text-white/90 hover:text-rose-300 font-medium text-lg"
             >
               Sobre
+            </button>
+            <button
+              onClick={() => scrollToSection("partners")}
+              className="nav-link text-white/90 hover:text-rose-300 font-medium text-lg"
+            >
+              Apoie
             </button>
 
             <button
