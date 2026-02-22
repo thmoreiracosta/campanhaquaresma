@@ -23,26 +23,7 @@ export const modalContentData = {
   `,
     summary: `Os discípulos perguntaram a Jesus não por curiosidade, mas por desejo de intimidade. A Quaresma nos convida a fazer a mesma pergunta: onde encontro Cristo em minha vida?`,
   },
-  "meditacao-02": {
-    title: "Meditação: Mestre, onde moras?",
-    content: `
-    <p style="text-align: justify;">Os discípulos, diante do convite silencioso de Jesus, perguntaram: "Mestre, onde moras?" (Jo 1,38). Não se tratava de curiosidade geográfica, mas de um ardente desejo de intimidade com Aquele que é o próprio Caminho, a Verdade e a Vida. No coração desta pergunta reside toda a espiritualidade cristã: buscar a presença de Deus em nosso dia a dia, reconhecer a Sua morada na própria alma e na história da salvação.</p><br>
-    <p style="text-align: justify;">O chamado de Jesus — "Vinde e vede!" — é um convite à experiência direta, à contemplação do Mistério Encarnado. É um chamado a nos deixar guiar pelo Espírito Santo, tal como os primeiros Apóstolos, que abandonaram suas redes e seguiram o Mestre sem demora. Como Santo Agostinho nos lembra: a verdadeira felicidade só se encontra em Deus, e nossa vida só se cumpre quando nos assentamos à Sua morada, aprendendo a ouvir, contemplar e amar.</p><br>
-    <p style="text-align: justify;">Encontramos Cristo nos sacramentos, especialmente na Eucaristia, onde Ele Se entrega totalmente por nós; na Palavra, que ilumina nosso caminho; e na oração, que nos torna participantes do diálogo divino. Os pobres e necessitados também se tornam morada de Jesus, porque "tive fome e me destes de comer" (Mt 25,35). A Igreja, Corpo Místico de Cristo, é o espaço sagrado onde Sua presença continua entre nós, sustentando-nos na caridade e na fé.</p><br>
-    <p style="text-align: justify;">Portanto, nesta Quaresma, escutemos novamente o chamado: aproximemo-nos do Mestre com coragem e fidelidade, seguindo o exemplo dos Santos e dos Apóstolos. Reflitamos sobre nossas próprias vidas: onde estamos buscando Cristo? Estamos dispostos a abandonar o que nos afasta d’Ele? O convite de Jesus permanece eterno: <em>"Vinde e vede!"</em> — não apenas com os olhos, mas com o coração aberto, para habitar na Sua presença, experimentar Sua misericórdia e tornar-nos luz no mundo.</p><br>
-    <p style="text-align: justify;"><strong>Onde encontrá-Lo?</strong></p>
-    <ul>
-      <li>Na Eucaristia — Sua presença real. Corpo, sangue, alma e divindade. Para lucrar indulgência na quaresma,recomenda-se ao menos 30 minutos de Adoração ao Santíssimo Sacramento.</li>
-      <li>Na Palavra — Através das Escrituras. Lectio Divina, estudo da palavra, liturgia diária.</li>
-      <li>Na oração — No silêncio do coração. No encontro consigo mesmo e com E'le que mora em nós.</li>
-      <li>Nos pobres — "Tive fome e me destes de comer. Tive sede e me deste de beber."</li>
-      <li>Na Igreja — Seu Corpo Místico.</li>
-    </ul><br><br>
-
-    <p style="text-align: center; font-style: italic;">Jesus respondeu: "Vinde e vede." (Jo 1,39)</p>
-  `,
-    summary: `OBBBBBs discípulos perguntaram a Jesus não por curiosidade, mas por desejo de intimidade. A Quaresma nos convida a fazer a mesma pergunta: onde encontro Cristo em minha vida?`,
-  },
+  
   "oracao-tema": {
     title: "A Oração Quaresmal",
     content: `<p>A oração é o primeiro pilar. Jesus mesmo se retirou ao deserto por 40 dias para orar.</p><br><p><strong>Práticas:</strong></p><ul><li>Participar da Santa Missa com frequência</li><li>Rezar o Santo Rosário diariamente</li><li>Lectio Divina com as leituras do dia</li><li>Silêncio e adoração</li><li>Via Sacra semanalmente</li></ul><br><p><em>"Vigiai e orai, para que não entreis em tentação." (Mt 26,41)</em></p>`,
