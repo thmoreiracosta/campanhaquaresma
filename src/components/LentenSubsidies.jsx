@@ -34,7 +34,7 @@ export default function LentenSubsidies() {
   }, []);
 
   const semanasMeditacoes = [
-    { title: "Meditações para 1ª Semana", link: "LINK_SEMANA_1" },
+    { title: "Meditações para 1ª Semana", link: "https://drive.google.com/file/d/1DVaRmkVqy-cMLEjGF7V6GhrM_KD3KI7m/view?usp=drive_link" },
     { title: "Meditações para 2ª Semana", link: "LINK_SEMANA_2" },
     { title: "Meditações para 3ª Semana", link: "LINK_SEMANA_3" },
     { title: "Meditações para 4ª Semana", link: "LINK_SEMANA_4" },
@@ -70,7 +70,7 @@ export default function LentenSubsidies() {
 
           {/* DORES */}
           <a
-            href="LINK_DORES"
+            href="https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center w-40"
@@ -87,7 +87,7 @@ export default function LentenSubsidies() {
 
           {/* VIA SACRA */}
           <a
-            href="LINK_VIA_SACRA"
+            href="https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center w-40"
@@ -104,7 +104,7 @@ export default function LentenSubsidies() {
 
           {/* CONFISSÃO */}
           <a
-            href="LINK_CONFISSAO"
+            href="https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center w-40"
