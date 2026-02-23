@@ -9,6 +9,7 @@ import logoEscravo from "../assets/logo-escravo.png";
 import logoTeofilos from "../assets/logo-teofilos.png";
 import logoFotoSacra from "../assets/logo-fotosacra.png";
 import logoEducarParaCeu from "../assets/logo-educarparaceu.png";
+import logoJuventude from "../assets/logo-juventude.png";
 
 
 export const apoiadores = [
@@ -77,5 +78,11 @@ export const apoiadores = [
     name: "Lente Sacra Fotografia Religiosa",
     image: logoFotoSacra,
     instagram: "https://www.instagram.com/lentesacrafotografia",
+  },
+  {
+    id: 12,
+    name: "Juventude Sementes",
+    image: logoJuventude,
+    instagram: "https://www.instagram.com/juventudesementes",
   },
 ];
