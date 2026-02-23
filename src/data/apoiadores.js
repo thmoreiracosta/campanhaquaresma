@@ -37,12 +37,6 @@ export const apoiadores = [
     instagram: "https://www.instagram.com/grupodeestudoslepanto/",
   },
   {
-    id: 4,
-    name: "Na Comunhão dos Santos",
-    image: logoNCS,
-    instagram: "https://www.instagram.com/na_comunhao_dos_santos",
-  },
-  {
     id: 5,
     name: "Evangelizando com Você",
     image: logoECV,
@@ -53,6 +47,12 @@ export const apoiadores = [
     name: "Lojinha São José",
     image: logoLSJ,
     instagram: "https://www.instagram.com/lojinha.sao.jose",
+  },
+  {
+    id: 4,
+    name: "Na Comunhão dos Santos",
+    image: logoNCS,
+    instagram: "https://www.instagram.com/na_comunhao_dos_santos",
   },
   {
     id: 7,
