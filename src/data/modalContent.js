@@ -4,6 +4,153 @@ const rosarioHoje = rosarioConteudo[tipoHoje];
 
 export const modalContentData = {
   "meditacao-01": {
+    title: "Minha última Quaresma",
+    content: `
+  <div style="font-size: 19px; line-height: 1.9;">
+    <p style="text-align: justify;">
+      Precisamos refletir e ter em mente que vamos morrer! Isso mesmo: vamos morrer!  
+      Mas a questão principal não é essa. Isso todos nós sabemos que vai nos acontecer.  
+      A questão primordial, urgente e necessária é: <strong>como vamos morrer!</strong>  
+      Disso depende nossa eternidade!
+    </p><br>
+  
+    <p style="text-align: justify;">
+      São Roberto Belarmino, em seu livro “A arte de morrer bem” adverte: “A regra geral  
+      'quem vive bem, irá morrer bem' deve ser mencionada antes de tudo, pois sendo a morte nada mais que o fim da vida,  
+      é certo que quem viver bem até o final da sua vida, morrerá bem; nem pode morrer doente quem que nunca estiver doente;  
+      por outro lado, quem nunca tiver vivido bem, não poderá morrer bem. A mesma coisa é observável em muitos casos similares:  
+      todos que houverem percorrido o caminho certo poderão chegar aos seus destinos; ao contrário, aqueles que vaguearem por aí,  
+      jamais chegarão ao final de sua jornada.”
+    </p><br>
+  
+    <p style="text-align: justify;">
+      Para viver bem é necessário, em primeiro lugar, morrer para o mundo antes de morrer em corpo.  
+      Todos que vivem para o mundo estão mortos para Deus: não podemos de nenhum modo viver para Deus,  
+      exceto se primeiro morrermos para o mundo.
+    </p><br>
+  
+    <p style="text-align: center; font-style: italic;">
+      “Felizes os que, no tempo da sua morte, estão já mortos para o mundo” - Santo Ambrósio
+    </p><br>
+  
+    <p style="text-align: justify;">
+      Três ações que nos ajudam no propósito de viver bem para morrer bem:
+    </p>
+  
+    <p style="text-align: justify; font-weight: bold;">A ORAÇÃO:</p>
+    <p style="text-align: justify;">
+      A necessidade de oração é repetida tão insistentemente nas Sagradas Escrituras que nada mais é mais claramente pedido que este dever.  
+      A oração, saibamo-lo ou não, é o encontro da sede de Deus com a nossa. Deus tem sede de que nós tenhamos sede d’Ele. (CIC 2560)
+    </p><br>
+  
+    <p style="text-align: justify; font-weight: bold;">O JEJUM:</p>
+    <p style="text-align: justify;">
+      Os frutos e as vantagens do jejum são facilmente provadas. Primeiro, é útil porque ajuda a preparar a alma para a oração e contemplação das coisas divinas.  
+      Outra vantagem do jejum é ser realizado como penitência por um pecado.  
+      “nem só de pão vive o homem, mas de toda palavra que sai da boca de Deus” (Mt 4,4).
+    </p><br>
+  
+    <p style="text-align: justify; font-weight: bold;">A ESMOLA:</p>
+    <p style="text-align: justify;">
+      Se não há muito a dizer sobre a necessidade de dar esmolas, há muito mais sobre os frutos, pois estes são abundantes.  
+      Primeiro, esmolas salvam a alma da morte eterna, sejam elas uma forma de satisfação ou disposição de receber as graças.  
+      Esmolas também, se dadas por um homem justo, e com verdadeira caridade, são meritórias para a vida eterna.  
+      As esmolas aumentam a confiança em Deus e produzem alegria espiritual; embora isto seja comum a outras obras de caridade,  
+      dá-se de modo particular com as esmolas, pois através delas presta-se um serviço especial a Deus e aos irmãos,  
+      e esta obra é claramente reconhecida como boa.
+    </p><br>
+  
+    <p style="text-align: center; font-style: italic;">
+      “Para morrer em paz, é vantajosíssimo pormos em ordem durante a vida os negócios temporais,  
+      fazendo desde já a disposição dos bens que é preciso deixar, a fim de não termos de nos ocupar então senão da nossa união com Deus.” Santo Agostinho
+    </p><br>
+  
+    <p style="text-align: justify;">
+      Se percebermos, as virtudes que São Roberto Belarmino elenca são o tripé da Quaresma: ORAÇÃO, JEJUM E ESMOLA.  
+      Mais do que uma tradição, a Quaresma é um chamado à conversão concreta.  
+      O jejum nos ensina o desprendimento, a oração nos coloca em sintonia com Deus, e a esmola nos revela que a caridade é a manifestação autêntica da fé.  
+      Assim, ao renunciarmos a pequenas vontades e confortos, aprendemos a nos desapegar deste mundo e, pouco a pouco,  
+      a morrer para o pecado e ressurgir para uma nova vida, voltando o olhar para o que é essencial:  
+      o amor de Deus que nos deu a vida e nos chama à santidade.
+    </p><br>
+  
+    <p style="text-align: center; font-style: italic;">
+      “Tu és pó, e ao pó hás de voltar.” (Gn 3, 19b) <br>
+      “No entardecer da vida, seremos julgados pelo amor.” São João da Cruz <br>
+      “Convertei-vos e crede no Evangelho” (Mc 1,15) <br>
+      A Quaresma tem uma mensagem muito séria para nos passar: NÃO ADIE A SUA CONVERSÃO.  
+      NÃO ADIE A SUA BUSCA PELA PERFEIÇÃO! NÃO ADIE SUA POSSIBILIDADE DE IR PARA O CÉU!
+    </p><br>
+  
+    <p style="text-align: justify;">
+      "Não podemos ser indecisos diante da possibilidade de oferecermos o melhor de nossas vidas para Deus."  
+      Santa Terezinha do Menino Jesus
+    </p><br>
+  
+    <p style="text-align: justify;">
+      Monsenhor Adolphe Tanquerey, sacerdote católico, professor e Doutor em Direito Canônico e Teologia Dogmática, nos ensina:  
+      “é preciso aplicar o desejo de perfeição imediatamente à ação presente, por mínima que seja.  
+      Desejar a santidade e adiar o esforço para o dia seguinte é uma tremenda ilusão.”  
+      Para ser Santo, só temos hoje!  
+      Santa Terezinha do Menino Jesus dizia:  
+      “A minha vida é um só instante, uma hora passageira. A minha vida é um só dia que me escapa e me foge  
+      Tu sabes, ó meu Deus! Para amar-Te na Terra. Só tenho o dia de hoje!”
+    </p><br>
+  
+    <p style="text-align: justify;">
+      “Quantas almas se perdem porque acreditam que terão tempo para se converter mais tarde!  
+      Mas quem garante o amanhã? A morte chega como um ladrão, sem avisar. Muitos que planejaram se confessar depois,  
+      que deixaram para buscar a Deus em outro momento, foram surpreendidos pelo juízo divino.” Santo Afonso Maria de Ligório
+    </p><br>
+  
+    <p style="text-align: justify;">
+      O que a Quaresma nos apresenta:
+    </p>
+  
+    <p style="text-align: justify;">
+      <strong>JESUS NO DESERTO</strong> - Seu tempo no deserto simboliza para nós a necessidade de purificação e fortalecimento espiritual,  
+      mostrando que a luta contra o pecado exige vigilância, renúncia e uma confiança inabalável no Pai.  
+      “Todos os anos, pelos quarenta dias da Grande Quaresma, a Igreja une-se ao mistério de Jesus no deserto” CIC 540
+    </p><br>
+  
+    <p style="text-align: justify;">
+      <strong>QUARTA-FEIRA DE CINZAS</strong>: Ao receber as cinzas, ouvimos as palavras:  
+      “Lembra-te que és pó e ao pó voltarás” (Gn 3,19) ou “Convertei-vos e crede no Evangelho” (Mc 1,15),  
+      recordando-nos da brevidade da vida e do chamado à conversão. Neste dia, entramos, mais profundamente,  
+      no espírito quaresmal, rumo a um caminho sincero de conversão e união a Nosso Senhor.
+    </p><br>
+  
+    <p style="text-align: justify;">
+      <strong>40 DIAS</strong>: A Bíblia nos apresenta o simbolismo do número 40 como um tempo de provação e purificação.  
+      O número 40 aparece repetidamente na Sagrada Escritura como um tempo de preparação e prova. Alguns exemplos são:
+    </p>
+  
+    <ul>
+      <li>Durante 40 dias e 40 noites, as águas do dilúvio cobriram a terra, enquanto Noé e sua família aguardavam a renovação do mundo (Gn 7,12);</li>
+      <li>O povo de Israel peregrinou 40 anos no deserto, sendo purificado antes de entrar na Terra Prometida (Nm 14,33);</li>
+      <li>Moisés jejuou 40 dias no Sinai antes de receber a Lei (Ex 34,28);</li>
+      <li>Elias caminhou esse mesmo período até o Horebe, onde encontrou Deus (1Rs 19,8).</li>
+    </ul><br>
+  
+    <p style="text-align: justify;">
+      Santo Afonso Maria de Ligório:  
+      “Os insensatos que não creem na vida futura, estimulam-se com o pensamento da morte a passarem bem a vida.  
+      De maneira bem diferente devemos nós proceder, os que sabemos pela fé que a alma sobrevive ao corpo.  
+      Nós, lembrando-nos de que em breve temos de morrer, devemos cuidar da nossa eternidade e por meio de oração e penitência aplacar a justiça divina.  
+      É com este intuito que a Igreja, depois de pôr as cinzas sobre a cabeça, nos ordena o jejum da Quaresma.”
+    </p><br>
+  
+    <p style="text-align: center; font-style: italic;">
+      “Não há falta que se possa comparar à do descuido da salvação eterna.” Santo Euquério
+    </p>
+  </div>
+  `,
+    summary: `
+    Precisamos refletir e ter em mente que vamos morrer! Isso mesmo: vamos morrer! 
+      Mas a questão principal não é essa. Isso todos nós sabemos que vai nos acontecer...
+  `,
+  },
+  "meditacao-02": {
     title: "Meditação: Mestre, onde moras?",
     content: `
   <div style="font-size: 19px; line-height: 1.9;">
@@ -24,154 +171,6 @@ export const modalContentData = {
   </div>
 `,
     summary: `Os discípulos perguntaram a Jesus não por curiosidade, mas por desejo de intimidade. A Quaresma nos convida a fazer a mesma pergunta: onde encontro Cristo em minha vida?`,
-  },
-  "meditacao-02": {
-    title: "Minha última Quaresma",
-    content: `
-  <div style="font-size: 19px; line-height: 1.9;">
-    <p style="text-align: justify;">
-      Precisamos refletir e ter em mente que vamos morrer! Isso mesmo: vamos morrer!  
-      Mas a questão principal não é essa. Isso todos nós sabemos que vai nos acontecer.  
-      A questão primordial, urgente e necessária é: <strong>como vamos morrer!</strong>  
-      Disso depende nossa eternidade!
-    </p><br>
-
-    <p style="text-align: justify;">
-      São Roberto Belarmino, em seu livro “A arte de morrer bem” adverte: “A regra geral  
-      'quem vive bem, irá morrer bem' deve ser mencionada antes de tudo, pois sendo a morte nada mais que o fim da vida,  
-      é certo que quem viver bem até o final da sua vida, morrerá bem; nem pode morrer doente quem que nunca estiver doente;  
-      por outro lado, quem nunca tiver vivido bem, não poderá morrer bem. A mesma coisa é observável em muitos casos similares:  
-      todos que houverem percorrido o caminho certo poderão chegar aos seus destinos; ao contrário, aqueles que vaguearem por aí,  
-      jamais chegarão ao final de sua jornada.”
-    </p><br>
-
-    <p style="text-align: justify;">
-      Para viver bem é necessário, em primeiro lugar, morrer para o mundo antes de morrer em corpo.  
-      Todos que vivem para o mundo estão mortos para Deus: não podemos de nenhum modo viver para Deus,  
-      exceto se primeiro morrermos para o mundo.
-    </p><br>
-
-    <p style="text-align: center; font-style: italic;">
-      “Felizes os que, no tempo da sua morte, estão já mortos para o mundo” - Santo Ambrósio
-    </p><br>
-
-    <p style="text-align: justify;">
-      Três ações que nos ajudam no propósito de viver bem para morrer bem:
-    </p>
-
-    <p style="text-align: justify; font-weight: bold;">A ORAÇÃO:</p>
-    <p style="text-align: justify;">
-      A necessidade de oração é repetida tão insistentemente nas Sagradas Escrituras que nada mais é mais claramente pedido que este dever.  
-      A oração, saibamo-lo ou não, é o encontro da sede de Deus com a nossa. Deus tem sede de que nós tenhamos sede d’Ele. (CIC 2560)
-    </p><br>
-
-    <p style="text-align: justify; font-weight: bold;">O JEJUM:</p>
-    <p style="text-align: justify;">
-      Os frutos e as vantagens do jejum são facilmente provadas. Primeiro, é útil porque ajuda a preparar a alma para a oração e contemplação das coisas divinas.  
-      Outra vantagem do jejum é ser realizado como penitência por um pecado.  
-      “nem só de pão vive o homem, mas de toda palavra que sai da boca de Deus” (Mt 4,4).
-    </p><br>
-
-    <p style="text-align: justify; font-weight: bold;">A ESMOLA:</p>
-    <p style="text-align: justify;">
-      Se não há muito a dizer sobre a necessidade de dar esmolas, há muito mais sobre os frutos, pois estes são abundantes.  
-      Primeiro, esmolas salvam a alma da morte eterna, sejam elas uma forma de satisfação ou disposição de receber as graças.  
-      Esmolas também, se dadas por um homem justo, e com verdadeira caridade, são meritórias para a vida eterna.  
-      As esmolas aumentam a confiança em Deus e produzem alegria espiritual; embora isto seja comum a outras obras de caridade,  
-      dá-se de modo particular com as esmolas, pois através delas presta-se um serviço especial a Deus e aos irmãos,  
-      e esta obra é claramente reconhecida como boa.
-    </p><br>
-
-    <p style="text-align: center; font-style: italic;">
-      “Para morrer em paz, é vantajosíssimo pormos em ordem durante a vida os negócios temporais,  
-      fazendo desde já a disposição dos bens que é preciso deixar, a fim de não termos de nos ocupar então senão da nossa união com Deus.” Santo Agostinho
-    </p><br>
-
-    <p style="text-align: justify;">
-      Se percebermos, as virtudes que São Roberto Belarmino elenca são o tripé da Quaresma: ORAÇÃO, JEJUM E ESMOLA.  
-      Mais do que uma tradição, a Quaresma é um chamado à conversão concreta.  
-      O jejum nos ensina o desprendimento, a oração nos coloca em sintonia com Deus, e a esmola nos revela que a caridade é a manifestação autêntica da fé.  
-      Assim, ao renunciarmos a pequenas vontades e confortos, aprendemos a nos desapegar deste mundo e, pouco a pouco,  
-      a morrer para o pecado e ressurgir para uma nova vida, voltando o olhar para o que é essencial:  
-      o amor de Deus que nos deu a vida e nos chama à santidade.
-    </p><br>
-
-    <p style="text-align: center; font-style: italic;">
-      “Tu és pó, e ao pó hás de voltar.” (Gn 3, 19b) <br>
-      “No entardecer da vida, seremos julgados pelo amor.” São João da Cruz <br>
-      “Convertei-vos e crede no Evangelho” (Mc 1,15) <br>
-      A Quaresma tem uma mensagem muito séria para nos passar: NÃO ADIE A SUA CONVERSÃO.  
-      NÃO ADIE A SUA BUSCA PELA PERFEIÇÃO! NÃO ADIE SUA POSSIBILIDADE DE IR PARA O CÉU!
-    </p><br>
-
-    <p style="text-align: justify;">
-      "Não podemos ser indecisos diante da possibilidade de oferecermos o melhor de nossas vidas para Deus."  
-      Santa Terezinha do Menino Jesus
-    </p><br>
-
-    <p style="text-align: justify;">
-      Monsenhor Adolphe Tanquerey, sacerdote católico, professor e Doutor em Direito Canônico e Teologia Dogmática, nos ensina:  
-      “é preciso aplicar o desejo de perfeição imediatamente à ação presente, por mínima que seja.  
-      Desejar a santidade e adiar o esforço para o dia seguinte é uma tremenda ilusão.”  
-      Para ser Santo, só temos hoje!  
-      Santa Terezinha do Menino Jesus dizia:  
-      “A minha vida é um só instante, uma hora passageira. A minha vida é um só dia que me escapa e me foge  
-      Tu sabes, ó meu Deus! Para amar-Te na Terra. Só tenho o dia de hoje!”
-    </p><br>
-
-    <p style="text-align: justify;">
-      “Quantas almas se perdem porque acreditam que terão tempo para se converter mais tarde!  
-      Mas quem garante o amanhã? A morte chega como um ladrão, sem avisar. Muitos que planejaram se confessar depois,  
-      que deixaram para buscar a Deus em outro momento, foram surpreendidos pelo juízo divino.” Santo Afonso Maria de Ligório
-    </p><br>
-
-    <p style="text-align: justify;">
-      O que a Quaresma nos apresenta:
-    </p>
-
-    <p style="text-align: justify;">
-      <strong>JESUS NO DESERTO</strong> - Seu tempo no deserto simboliza para nós a necessidade de purificação e fortalecimento espiritual,  
-      mostrando que a luta contra o pecado exige vigilância, renúncia e uma confiança inabalável no Pai.  
-      “Todos os anos, pelos quarenta dias da Grande Quaresma, a Igreja une-se ao mistério de Jesus no deserto” CIC 540
-    </p><br>
-
-    <p style="text-align: justify;">
-      <strong>QUARTA-FEIRA DE CINZAS</strong>: Ao receber as cinzas, ouvimos as palavras:  
-      “Lembra-te que és pó e ao pó voltarás” (Gn 3,19) ou “Convertei-vos e crede no Evangelho” (Mc 1,15),  
-      recordando-nos da brevidade da vida e do chamado à conversão. Neste dia, entramos, mais profundamente,  
-      no espírito quaresmal, rumo a um caminho sincero de conversão e união a Nosso Senhor.
-    </p><br>
-
-    <p style="text-align: justify;">
-      <strong>40 DIAS</strong>: A Bíblia nos apresenta o simbolismo do número 40 como um tempo de provação e purificação.  
-      O número 40 aparece repetidamente na Sagrada Escritura como um tempo de preparação e prova. Alguns exemplos são:
-    </p>
-
-    <ul>
-      <li>Durante 40 dias e 40 noites, as águas do dilúvio cobriram a terra, enquanto Noé e sua família aguardavam a renovação do mundo (Gn 7,12);</li>
-      <li>O povo de Israel peregrinou 40 anos no deserto, sendo purificado antes de entrar na Terra Prometida (Nm 14,33);</li>
-      <li>Moisés jejuou 40 dias no Sinai antes de receber a Lei (Ex 34,28);</li>
-      <li>Elias caminhou esse mesmo período até o Horebe, onde encontrou Deus (1Rs 19,8).</li>
-    </ul><br>
-
-    <p style="text-align: justify;">
-      Santo Afonso Maria de Ligório:  
-      “Os insensatos que não creem na vida futura, estimulam-se com o pensamento da morte a passarem bem a vida.  
-      De maneira bem diferente devemos nós proceder, os que sabemos pela fé que a alma sobrevive ao corpo.  
-      Nós, lembrando-nos de que em breve temos de morrer, devemos cuidar da nossa eternidade e por meio de oração e penitência aplacar a justiça divina.  
-      É com este intuito que a Igreja, depois de pôr as cinzas sobre a cabeça, nos ordena o jejum da Quaresma.”
-    </p><br>
-
-    <p style="text-align: center; font-style: italic;">
-      “Não há falta que se possa comparar à do descuido da salvação eterna.” Santo Euquério
-    </p>
-  </div>
-  `,
-    summary: `
-    A Quaresma nos convida a refletir sobre a morte e, principalmente, como viver para morrer bem.  
-    A oração, o jejum e a esmola são o tripé essencial para essa preparação espiritual.  
-    É um chamado urgente à conversão, desprendimento e caridade, lembrando que a vida é breve e o momento de buscar a santidade é hoje.
-  `,
   },
 
   "oracao-tema": {
