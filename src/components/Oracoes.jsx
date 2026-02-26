@@ -1,6 +1,13 @@
+import { useScrollReveal } from "../hooks/useScrollReveal";
+
 export default function Oracoes({ openModal }) {
+  const [ref, visible] = useScrollReveal();
   return (
-    <section id="oracoes" className="py-12 sm:py-20 px-4 bg-gray-50">
+    <section
+      id="oracoes"
+      ref={ref}
+      className={`py-12 sm:py-20 px-4 bg-gray-50 reveal ${visible ? "visible" : ""}`}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-center mb-16 text-rose-500 text-base sm:text-lg tracking-widest uppercase">
@@ -63,7 +70,9 @@ export default function Oracoes({ openModal }) {
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-800 text-base sm:text-2xl">{item.desc}</p>
+                <p className="text-gray-800 text-base sm:text-2xl">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
@@ -110,7 +119,9 @@ export default function Oracoes({ openModal }) {
                 <span className="font-bold text-lg sm:text-xl text-purple-900">
                   {item.title}
                 </span>
-                <p className="text-gray-600 text-base sm:text-lg">{item.desc}</p>
+                <p className="text-gray-600 text-base sm:text-lg">
+                  {item.desc}
+                </p>
               </button>
             ))}
           </div>

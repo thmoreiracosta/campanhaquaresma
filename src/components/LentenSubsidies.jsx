@@ -1,16 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+//import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useAOS } from "../hooks/useAOS";
 import dores from "../assets/dores.png";
 import viaSacra from "../assets/via-sacra.png";
 import cquaresma from "../assets/cquaresma.png";
 import confissao from "../assets/confissao.png";
+import ultimaQuaresma from "../assets/capa-ultimaquaresma.png";
+import robertSarah from "../assets/robertSarah.png";
 
 export default function LentenSubsidies() {
-  // 🔥 DATA INICIAL DA QUARESMA (AJUSTE AQUI TODO ANO)
-  const inicioQuaresma = new Date("2026-02-22"); 
+  const inicioQuaresma = new Date("2026-02-22");
 
   const [currentWeek, setCurrentWeek] = useState(1);
   const [daysRemaining, setDaysRemaining] = useState(null);
+  //const [ref, visible] = useScrollReveal(0.25);
+  const [ref, visible] = useAOS();
 
+  const sectionRef = useRef(null);
+
+  // =============================
+  // CONTROLE DE SEMANAS
+  // =============================
   useEffect(() => {
     const hoje = new Date();
     const diffTime = hoje - inicioQuaresma;
@@ -20,12 +30,10 @@ export default function LentenSubsidies() {
     setCurrentWeek(semanaAtual);
 
     const proximaLiberacao = new Date(inicioQuaresma);
-    proximaLiberacao.setDate(
-      inicioQuaresma.getDate() + semanaAtual * 7
-    );
+    proximaLiberacao.setDate(inicioQuaresma.getDate() + semanaAtual * 7);
 
     const restante = Math.ceil(
-      (proximaLiberacao - hoje) / (1000 * 60 * 60 * 24)
+      (proximaLiberacao - hoje) / (1000 * 60 * 60 * 24),
     );
 
     if (semanaAtual < 6 && restante > 0) {
@@ -33,8 +41,41 @@ export default function LentenSubsidies() {
     }
   }, []);
 
+  // =============================
+  // INTERSECTION OBSERVER CORRETO
+  // =============================
+  useEffect(() => {
+    const element = sectionRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(element); // anima só uma vez
+        }
+      },
+      {
+        threshold: 0.3, // só dispara quando 30% estiver visível
+        rootMargin: "0px 0px -50px 0px", // evita disparar cedo demais
+      },
+    );
+
+    observer.observe(element);
+
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, []);
+
   const semanasMeditacoes = [
-    { title: "Meditações para 1ª Semana", link: "https://drive.google.com/file/d/1DVaRmkVqy-cMLEjGF7V6GhrM_KD3KI7m/view?usp=drive_link" },
+    {
+      title: "Meditações para 1ª Semana",
+      link: "https://drive.google.com/file/d/1DVaRmkVqy-cMLEjGF7V6GhrM_KD3KI7m/view?usp=drive_link",
+    },
     { title: "Meditações para 2ª Semana", link: "LINK_SEMANA_2" },
     { title: "Meditações para 3ª Semana", link: "LINK_SEMANA_3" },
     { title: "Meditações para 4ª Semana", link: "LINK_SEMANA_4" },
@@ -43,9 +84,12 @@ export default function LentenSubsidies() {
   ];
 
   return (
-    <section id="download" className="py-12 sm:py-20 px-4 bg-gray-50">
+    <section
+      id="download"
+      ref={ref}
+      className={`py-12 sm:py-20 px-4 bg-gray-50 aos fade-up ${visible ? "visible" : ""}`}
+    >
       <div className="max-w-7xl mx-auto">
-
         {/* HEADER */}
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-rose-500 text-sm tracking-widest uppercase">
@@ -65,63 +109,31 @@ export default function LentenSubsidies() {
           )}
         </div>
 
-        {/* GRID PRINCIPAL — 6 COLUNAS */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-items-center">
+        {/* ========================= */}
+        {/* MEDITAÇÕES */}
+        {/* ========================= */}
+        <div
+          className={`text-center mb-10 ${visible ? "animate-fadeInUp" : "opacity-0"}`}
+        >
+          <h3 className="cinzel text-2xl sm:text-3xl font-bold text-purple-900">
+            Meditações da Quaresma
+          </h3>
+          <div className="w-24 h-1 bg-rose-500 mx-auto my-4 rounded-full"></div>
+          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
+            Caminho espiritual semanal para viver intensamente cada etapa da
+            Quaresma.
+          </p>
+        </div>
 
-          {/* DORES */}
-          <a
-            href="https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-rose-liturgy"
-              src={dores}
-              alt="As Dores de Nossa Senhora"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              As Dores de Nossa Senhora
-            </p>
-          </a>
-
-          {/* VIA SACRA */}
-          <a
-            href="https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
-              src={viaSacra}
-              alt="Via-Sacra"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              Via-Sacra
-            </p>
-          </a>
-
-          {/* CONFISSÃO */}
-          <a
-            href="https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-40"
-          >
-            <img
-              className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
-              src={confissao}
-              alt="Manual de Confissão"
-            />
-            <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
-              Manual de Confissão
-            </p>
-          </a>
-
-          {/* MEDITAÇÕES AUTOMÁTICAS */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-items-center mb-20">
           {semanasMeditacoes.map((semana, index) => {
             const liberada = currentWeek > index;
+
+            const animationClass = visible ? "animate-fadeInUp" : "opacity-0";
+
+            const styleDelay = {
+              animationDelay: `${index * 120}ms`,
+            };
 
             return liberada ? (
               <a
@@ -129,7 +141,8 @@ export default function LentenSubsidies() {
                 href={semana.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center w-40"
+                style={styleDelay}
+                className={`flex flex-col items-center w-40 ${animationClass}`}
               >
                 <img
                   className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
@@ -143,9 +156,9 @@ export default function LentenSubsidies() {
             ) : (
               <div
                 key={index}
-                className="relative flex flex-col items-center w-40 group"
+                style={styleDelay}
+                className={`relative flex flex-col items-center w-40 group ${animationClass}`}
               >
-                {/* Cadeado */}
                 <div className="absolute top-2 right-2 text-purple-900 opacity-70">
                   🔒
                 </div>
@@ -156,7 +169,6 @@ export default function LentenSubsidies() {
                   alt={semana.title}
                 />
 
-                {/* Tooltip */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                   <span className="bg-white/90 text-purple-900 text-xs font-semibold px-3 py-1 rounded-lg shadow-md">
                     Liberado na {index + 1}ª semana
@@ -167,6 +179,67 @@ export default function LentenSubsidies() {
                   {semana.title}
                 </p>
               </div>
+            );
+          })}
+        </div>
+
+        {/* ========================= */}
+        {/* EBOOKS */}
+        {/* ========================= */}
+        <div
+          className={`text-center mb-10 ${visible ? "animate-fadeInUp" : "opacity-0"}`}
+        >
+          <h3 className="cinzel text-2xl sm:text-3xl font-bold text-purple-900">
+            Ebooks Avulsos
+          </h3>
+          <div className="w-24 h-1 bg-rose-500 mx-auto my-4 rounded-full"></div>
+          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
+            Materiais complementares para aprofundar sua vivência espiritual.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-items-center">
+          {[
+            dores, 
+            viaSacra, 
+            confissao, 
+            ultimaQuaresma,
+            robertSarah,
+          ].map((img, index) => {
+            const links = [
+              "https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link",
+              "https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link",
+              "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",
+              "https://drive.google.com/file/d/1JiGoxkEuI8g0oC6jjvUH_GNh1j0tZIAd/view?usp=drive_link",
+              "https://drive.google.com/file/d/1Gcme26Ska5JirXJKJn1WsEJ9SgwGf9F_/view?usp=drive_link",
+            ];
+
+            const titles = [
+              "As Dores de Nossa Senhora",
+              "Via-Sacra",
+              "Manual de Confissão",
+              "Minha Última Quaresma",
+              "Homilia Cardeal Robert Sarah",
+            ];
+
+            return (
+              <a
+                key={index}
+                href={links[index]}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ animationDelay: `${index * 150}ms` }}
+                className={`flex flex-col items-center w-40 ${visible ? "animate-fadeInUp" : "opacity-0"}`}
+              >
+                <img
+                  className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
+                  src={img}
+                  alt={titles[index]}
+                />
+                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
+                  {titles[index]}
+                </p>
+              </a>
             );
           })}
         </div>

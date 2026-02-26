@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import { modalContentData } from "../data/modalContent";
 
 const meditacoes = Object.entries(modalContentData)
@@ -8,19 +9,22 @@ const meditacoes = Object.entries(modalContentData)
 export default function Meditacao({ openModal }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentMeditacao = meditacoes[currentIndex];
+  const [ref, visible] = useScrollReveal();
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % meditacoes.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? meditacoes.length - 1 : prev - 1
-    );
+    setCurrentIndex((prev) => (prev === 0 ? meditacoes.length - 1 : prev - 1));
   };
 
   return (
-    <section id="formacao" className="py-12 sm:py-20 px-4">
+    <section
+      id="formacao"
+      ref={ref}
+      className={`py-12 sm:py-20 px-4 reveal ${visible ? "visible" : ""}`}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -113,10 +117,30 @@ export default function Meditacao({ openModal }) {
         {/* Cards menores – apenas texto maior no mobile */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {[
-            { icon: "🙏", title: "Oração", desc: "Diálogo com Deus", key: "oracao-tema" },
-            { icon: "🍞", title: "Jejum", desc: "Mortificação santa", key: "jejum-tema" },
-            { icon: "❤️", title: "Esmola", desc: "Caridade cristã", key: "esmola-tema" },
-            { icon: "✨", title: "Conversão", desc: "Mudança de vida", key: "conversao-tema" },
+            {
+              icon: "🙏",
+              title: "Oração",
+              desc: "Diálogo com Deus",
+              key: "oracao-tema",
+            },
+            {
+              icon: "🍞",
+              title: "Jejum",
+              desc: "Mortificação santa",
+              key: "jejum-tema",
+            },
+            {
+              icon: "❤️",
+              title: "Esmola",
+              desc: "Caridade cristã",
+              key: "esmola-tema",
+            },
+            {
+              icon: "✨",
+              title: "Conversão",
+              desc: "Mudança de vida",
+              key: "conversao-tema",
+            },
           ].map((item) => (
             <div
               key={item.key}
@@ -127,9 +151,7 @@ export default function Meditacao({ openModal }) {
               <h4 className="cinzel font-bold text-xl sm:text-xl mb-2 text-purple-900">
                 {item.title}
               </h4>
-              <p className="text-gray-700 text-base sm:text-sm">
-                {item.desc}
-              </p>
+              <p className="text-gray-700 text-base sm:text-sm">{item.desc}</p>
             </div>
           ))}
         </div>

@@ -1,32 +1,45 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      keyframes: {
+        fadeInUp: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(40px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        fadeInUp: "fadeInUp 0.8s ease-out forwards",
+        fadeInUpSlow: "fadeInUp 1.2s ease-out forwards",
+      },
       colors: {
         purple: {
-          900: '#4A1A6B',
-          700: '#6B2D8A',
-          200: '#E8D5E8',
-          100: '#F5F0F8',
+          900: "#4A1A6B",
+          700: "#6B2D8A",
+          200: "#E8D5E8",
+          100: "#F5F0F8",
         },
         rose: {
-          500: '#D4789C',
-          300: '#E8A4BC',
-          400: '#E89BAC',
+          500: "#D4789C",
+          300: "#E8A4BC",
+          400: "#E89BAC",
         },
         gold: {
-          400: '#C9A227',
-        }
+          400: "#C9A227",
+        },
       },
       fontFamily: {
-        cinzel: ['Cinzel', 'serif'],
-        crimson: ['Crimson Pro', 'serif'],
-      }
+        cinzel: ["Cinzel", "serif"],
+        crimson: ["Crimson Pro", "serif"],
+      },
     },
   },
   plugins: [],
-}
+};

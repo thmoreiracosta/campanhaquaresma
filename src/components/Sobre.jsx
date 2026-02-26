@@ -1,6 +1,14 @@
+import { useScrollReveal } from "../hooks/useScrollReveal";
+
 export default function Sobre({ openModal }) {
+  const [ref, visible] = useScrollReveal();
+
   return (
-    <section id="sobre" className="py-12 sm:py-20 px-4">
+    <section
+      id="sobre"
+      ref={ref}
+      className={`py-12 sm:py-20 px-4 reveal ${visible ? "visible" : ""}`}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-center mb-16 text-rose-500 text-sm tracking-widest uppercase">
