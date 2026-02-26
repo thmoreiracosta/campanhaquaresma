@@ -6,7 +6,7 @@ import confissao from "../assets/confissao.png";
 
 export default function LentenSubsidies() {
   // 🔥 DATA INICIAL DA QUARESMA (AJUSTE AQUI TODO ANO)
-  const inicioQuaresma = new Date("2026-02-18"); 
+  const inicioQuaresma = new Date("2026-02-22"); 
 
   const [currentWeek, setCurrentWeek] = useState(1);
   const [daysRemaining, setDaysRemaining] = useState(null);
