@@ -202,23 +202,20 @@ export default function LentenSubsidies() {
           {[
             dores, 
             viaSacra, 
-            confissao, 
-            ultimaQuaresma,
+            confissao,             
             robertSarah,
           ].map((img, index) => {
             const links = [
               "https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link",
               "https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link",
-              "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",
-              "https://drive.google.com/file/d/1JiGoxkEuI8g0oC6jjvUH_GNh1j0tZIAd/view?usp=drive_link",
+              "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",              
               "https://drive.google.com/file/d/1Gcme26Ska5JirXJKJn1WsEJ9SgwGf9F_/view?usp=drive_link",
             ];
 
             const titles = [
               "As Dores de Nossa Senhora",
               "Via-Sacra",
-              "Manual de Confissão",
-              "Minha Última Quaresma",
+              "Manual de Confissão",              
               "Homilia Cardeal Robert Sarah",
             ];
 
