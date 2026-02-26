@@ -82,18 +82,24 @@ export default function Navigation({
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem("theme");
     if (saved) return saved;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+
+    // Verifica hora
+    const hour = new Date().getHours();
+    return hour >= 18 || hour < 6 ? "dark" : "light";
   });
 
   useEffect(() => {
-    document.body.classList.remove(theme === "dark" ? "light" : "dark");
-    document.body.classList.add(theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  const toggleTheme = () =>
+    setTheme((prev) => {
+      const next = prev === "dark" ? "light" : "dark";
+      document.documentElement.classList.remove(prev);
+      document.documentElement.classList.add(next);
+      localStorage.setItem("theme", next); // garante persistência
+      return next;
+    });
 
   const handleClick = (section) => {
     scrollToSection(section);
