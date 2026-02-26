@@ -73,7 +73,7 @@ export default function Meditacao({ openModal }) {
           <div className="flex gap-3 sm:gap-4">
             {meditacoes.map((med, index) => (
               <span
-                key={med.key}                
+                key={med.key}
                 onClick={() => setCurrentIndex(index)}
                 className={`
           flex-shrink-0 px-5 py-2 sm:py-1 rounded-full cursor-pointer font-semibold text-sm sm:text-base transition-all duration-300
@@ -102,10 +102,12 @@ export default function Meditacao({ openModal }) {
 
         {/* Card de Meditação */}
         <div
-          className="card-hover bg-gradient-to-br from-rose-200/40 to-purple-200/40 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-rose-300/30 mb-8 cursor-pointer relative transition-transform duration-500 hover:-translate-y-1 hover:shadow-xl"
+          className="card-hover bg-gradient-to-br from-rose-200/40 to-purple-200/40 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-rose-300/30 mb-8 cursor-pointer relative transition-transform duration-500 hover:-translate-y-1 hover:shadow-xl
+  pt-20 sm:pt-10" // mais padding-top no mobile
           onClick={() => openModal(currentMeditacao.key)}
         >
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
+            {/* ícone */}
             <div className="lg:w-1/3 flex-shrink-0">
               <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-yellow-400 to-rose-400 rounded-full flex items-center justify-center shadow-2xl">
                 <span className="text-6xl sm:text-5xl">✝️</span>
@@ -114,15 +116,15 @@ export default function Meditacao({ openModal }) {
 
             {/* Conteúdo */}
             <div className="lg:w-2/3 text-center lg:text-left">
-              <h3 className="cinzel text-4xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 text-purple-900">
+              <h3 className="cinzel text-4xl sm:text-3xl md:text-4xl font-bold mt-6 mb-4 text-purple-900 sm:mt-2">
                 {currentMeditacao.title.replace("Meditação: ", "")}
               </h3>
 
-              {/* TEXTO MAIOR SÓ NO MOBILE */}
-              <p className="text-gray-800 text-xl sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 mr-8 text-justify">
+              <p className="text-gray-800 text-xl sm:text-base md:text-lg lg:text-xl leading-relaxed mb-12 sm:mb-8 mr-8 text-justify">
                 {currentMeditacao.summary}
               </p>
 
+              {/* Continuar lendo */}
               <div className="flex items-center justify-center lg:justify-start gap-2 text-rose-500 font-semibold text-xl sm:text-lg">
                 <span>Continuar lendo</span>
                 <svg
@@ -142,28 +144,52 @@ export default function Meditacao({ openModal }) {
             </div>
           </div>
 
+          {/* === BOTÕES DESKTOP (absolute) === */}
           {meditacoes.length > 1 && (
-            <div className="absolute top-1/2 left-2 transform -translate-y-1/2">
+            <>
+              <div className="hidden sm:flex absolute left-2 top-1/2 transform -translate-y-1/2">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handlePrev();
+                  }}
+                  className="bg-purple-200/60 p-3 w-10 h-10 sm:w-10 sm:h-10 rounded-full hover:bg-purple-300 flex items-center justify-center text-purple-900 font-bold text-lg"
+                >
+                  ◀
+                </button>
+              </div>
+              <div className="hidden sm:flex absolute right-2 top-1/2 transform -translate-y-1/2">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleNext();
+                  }}
+                  className="bg-purple-200/60 p-3 w-10 h-10 sm:w-10 sm:h-10 rounded-full hover:bg-purple-300 flex items-center justify-center text-purple-900 font-bold text-lg"
+                >
+                  ▶
+                </button>
+              </div>
+            </>
+          )}
+
+          {/* === BOTÕES MOBILE (entre título e summary) === */}
+          {meditacoes.length > 1 && (
+            <div className="flex justify-center gap-4 my-4 sm:hidden">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   handlePrev();
                 }}
-                className="bg-purple-200/60 p-3 w-10 h-10 sm:w-8 sm:h-8 rounded-full hover:bg-purple-300 flex items-center justify-center text-purple-900 font-bold text-lg"
+                className="bg-purple-200/60 p-3 w-12 h-12 rounded-full hover:bg-purple-300 flex items-center justify-center text-purple-900 font-bold text-lg"
               >
                 ◀
               </button>
-            </div>
-          )}
-
-          {meditacoes.length > 1 && (
-            <div className="absolute top-1/2 right-2 transform -translate-y-1/2">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   handleNext();
                 }}
-                className="bg-purple-200/60 p-3 w-10 h-10 sm:w-8 sm:h-8 rounded-full hover:bg-purple-300 flex items-center justify-center text-purple-900 font-bold text-lg"
+                className="bg-purple-200/60 p-3 w-12 h-12 rounded-full hover:bg-purple-300 flex items-center justify-center text-purple-900 font-bold text-lg"
               >
                 ▶
               </button>
