@@ -73,16 +73,7 @@ export default function Meditacao({ openModal }) {
           <div className="flex gap-3 sm:gap-4">
             {meditacoes.map((med, index) => (
               <span
-                key={med.key}
-                ref={(el) => {
-                  if (el && index === currentIndex) {
-                    el.scrollIntoView({
-                      behavior: "smooth",
-                      inline: "center",
-                      block: "nearest",
-                    });
-                  }
-                }}
+                key={med.key}                
                 onClick={() => setCurrentIndex(index)}
                 className={`
           flex-shrink-0 px-5 py-2 sm:py-1 rounded-full cursor-pointer font-semibold text-sm sm:text-base transition-all duration-300
