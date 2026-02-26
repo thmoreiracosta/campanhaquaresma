@@ -87,23 +87,23 @@ export default function LentenSubsidies() {
     <section
       id="download"
       ref={ref}
-      className={`py-12 sm:py-20 px-4 bg-gray-50 aos fade-up ${visible ? "visible" : ""}`}
+      className={`py-12 sm:py-20 px-4 bg-gray-50 dark:bg-slate-950 aos fade-up ${visible ? "visible" : ""}`}
     >
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <div className="text-center mb-12 sm:mb-16">
-          <span className="text-rose-500 text-sm tracking-widest uppercase">
+          <span className="text-rose-500 dark:text-rose-400 text-sm tracking-widest uppercase">
             Aprofundamento
           </span>
-          <h2 className="cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-purple-900">
+          <h2 className="cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-purple-900 dark:text-purple-300">
             Subsídios Quaresmais
           </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto text-base sm:text-lg md:text-xl">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto text-base sm:text-lg md:text-xl">
             Material para download. Toda semana novas meditações.
           </p>
 
           {daysRemaining && (
-            <p className="mt-4 text-sm text-rose-600 font-semibold">
+            <p className="mt-4 text-sm text-rose-600 dark:text-rose-400 font-semibold">
               Próxima meditação disponível em {daysRemaining} dias
             </p>
           )}
@@ -115,11 +115,11 @@ export default function LentenSubsidies() {
         <div
           className={`text-center mb-10 ${visible ? "animate-fadeInUp" : "opacity-0"}`}
         >
-          <h3 className="cinzel text-2xl sm:text-3xl font-bold text-purple-900">
+          <h3 className="cinzel text-2xl sm:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Meditações da Quaresma
           </h3>
-          <div className="w-24 h-1 bg-rose-500 mx-auto my-4 rounded-full"></div>
-          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
+          <div className="w-24 h-1 bg-rose-500 dark:bg-rose-400 mx-auto my-4 rounded-full"></div>
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
             Caminho espiritual semanal para viver intensamente cada etapa da
             Quaresma.
           </p>
@@ -145,11 +145,11 @@ export default function LentenSubsidies() {
                 className={`flex flex-col items-center w-40 ${animationClass}`}
               >
                 <img
-                  className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
+                  className="w-32 h-48 border-8 border-white dark:border-gray-800 shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
                   src={cquaresma}
                   alt={semana.title}
                 />
-                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
+                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy dark:text-white text-lg hover:text-rose-liturgy transition-colors duration-300">
                   {semana.title}
                 </p>
               </a>
@@ -159,23 +159,23 @@ export default function LentenSubsidies() {
                 style={styleDelay}
                 className={`relative flex flex-col items-center w-40 group ${animationClass}`}
               >
-                <div className="absolute top-2 right-2 text-purple-900 opacity-70">
+                <div className="absolute top-2 right-2 text-purple-900 dark:text-purple-300 opacity-70">
                   🔒
                 </div>
 
                 <img
-                  className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl opacity-40"
+                  className="w-32 h-48 border-8 border-white dark:border-gray-800 shadow-2xl rounded-3xl opacity-40"
                   src={cquaresma}
                   alt={semana.title}
                 />
 
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                  <span className="bg-white/90 text-purple-900 text-xs font-semibold px-3 py-1 rounded-lg shadow-md">
+                  <span className="bg-white/90 dark:bg-gray-800 text-purple-900 dark:text-purple-300 text-xs font-semibold px-3 py-1 rounded-lg shadow-md">
                     Liberado na {index + 1}ª semana
                   </span>
                 </div>
 
-                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg opacity-60">
+                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy dark:text-purple-300 text-lg opacity-60">
                   {semana.title}
                 </p>
               </div>
@@ -189,33 +189,28 @@ export default function LentenSubsidies() {
         <div
           className={`text-center mb-10 ${visible ? "animate-fadeInUp" : "opacity-0"}`}
         >
-          <h3 className="cinzel text-2xl sm:text-3xl font-bold text-purple-900">
+          <h3 className="cinzel text-2xl sm:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Ebooks Avulsos
           </h3>
-          <div className="w-24 h-1 bg-rose-500 mx-auto my-4 rounded-full"></div>
-          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
+          <div className="w-24 h-1 bg-rose-500 dark:bg-rose-400 mx-auto my-4 rounded-full"></div>
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
             Materiais complementares para aprofundar sua vivência espiritual.
           </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-items-center">
-          {[
-            dores, 
-            viaSacra, 
-            confissao,             
-            robertSarah,
-          ].map((img, index) => {
+          {[dores, viaSacra, confissao, robertSarah].map((img, index) => {
             const links = [
               "https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link",
               "https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link",
-              "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",              
+              "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",
               "https://drive.google.com/file/d/1Gcme26Ska5JirXJKJn1WsEJ9SgwGf9F_/view?usp=drive_link",
             ];
 
             const titles = [
               "As Dores de Nossa Senhora",
               "Via-Sacra",
-              "Manual de Confissão",              
+              "Manual de Confissão",
               "Homilia Cardeal Robert Sarah",
             ];
 
@@ -229,11 +224,11 @@ export default function LentenSubsidies() {
                 className={`flex flex-col items-center w-40 ${visible ? "animate-fadeInUp" : "opacity-0"}`}
               >
                 <img
-                  className="w-32 h-48 border-8 border-white shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
+                  className="w-32 h-48 border-8 border-white dark:border-gray-800 shadow-2xl rounded-3xl hover:scale-110 hover:border-rose-liturgy transition-all duration-500"
                   src={img}
                   alt={titles[index]}
                 />
-                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy text-lg hover:text-rose-liturgy transition-colors duration-300">
+                <p className="h-16 flex items-center text-center mt-4 font-cinzel font-semibold text-purple-liturgy dark:text-white text-lg hover:text-rose-liturgy transition-colors duration-300">
                   {titles[index]}
                 </p>
               </a>

@@ -64,8 +64,8 @@ export default function SponsorGrid({ apoiadores }) {
             </div>
 
             <span
-              className="mt-2 font-cinzel text-sm text-black
-                             group-hover:text-rose-800
+              className="mt-2 font-cinzel text-sm text-black dark:text-white
+                             group-hover:text-rose-800 dark:group-hover:text-rose-300
                              transition-all duration-300 text-center"
             >
               {apoiador.name}

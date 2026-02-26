@@ -10,6 +10,7 @@ import logoTeofilos from "../assets/logo-teofilos.png";
 import logoFotoSacra from "../assets/logo-fotosacra.png";
 import logoEducarParaCeu from "../assets/logo-educarparaceu.png";
 import logoJuventude from "../assets/logo-juventude.png";
+import logoAVidaDoCatolico from "../assets/logo-avidacatolico.png";
 
 
 export const apoiadores = [
@@ -84,5 +85,11 @@ export const apoiadores = [
     name: "Juventude Sementes",
     image: logoJuventude,
     instagram: "https://www.instagram.com/juventudesementes",
+  },
+  {
+    id: 13,
+    name: "A vida do Católico",
+    image: logoAVidaDoCatolico,
+    instagram: "https://www.instagram.com/avidadocatolico",
   },
 ];
