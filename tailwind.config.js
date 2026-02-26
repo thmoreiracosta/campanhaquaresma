@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        md: "1030px", // breakpoint customizado para tablets
+      },
       keyframes: {
         fadeInUp: {
           "0%": {
@@ -22,7 +25,7 @@ export default {
       },
       colors: {
         purple: {
-          950: "#2a0a3a", // fundo escuro
+          950: "#2a0a3a",
           900: "#4A1A6B",
           700: "#6B2D8A",
           200: "#E8D5E8",
@@ -44,13 +47,12 @@ export default {
           500: "#D4789C",
           400: "#E89BAC",
           300: "#E8A4BC",
-          600: "#C05678", // para dark mode
+          600: "#C05678",
         },
         gold: {
           400: "#C9A227",
         },
       },
-
       fontFamily: {
         cinzel: ["Cinzel", "serif"],
         crimson: ["Crimson Pro", "serif"],

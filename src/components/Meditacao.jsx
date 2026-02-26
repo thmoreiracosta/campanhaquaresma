@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { modalContentData } from "../data/modalContent";
 
@@ -7,9 +7,35 @@ const meditacoes = Object.entries(modalContentData)
   .map(([key, value]) => ({ key, ...value }));
 
 export default function Meditacao({ openModal }) {
+  const letreiroRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentMeditacao = meditacoes[currentIndex];
   const [ref, visible] = useScrollReveal();
+
+  // === Carrossel automático ===
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % meditacoes.length);
+    }, 5000); // muda a cada 5 segundos
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (letreiroRef.current) {
+      const container = letreiroRef.current;
+      const activeItem = container.children[currentIndex];
+      if (activeItem) {
+        const offset =
+          activeItem.offsetLeft +
+          activeItem.offsetWidth / 2 -
+          container.offsetWidth / 2;
+        container.scrollTo({
+          left: offset,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [currentIndex]);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % meditacoes.length);
@@ -41,14 +67,54 @@ export default function Meditacao({ openModal }) {
             Reflexões para encontrar Cristo no silêncio do coração.
           </p>
         </div>
+        {/* === LETREIRO DE TÍTULOS === */}
+
+        <div className="relative w-full overflow-x-auto scrollbar-none mb-4 py-2 px-2 sm:px-4">
+          <div className="flex gap-3 sm:gap-4">
+            {meditacoes.map((med, index) => (
+              <span
+                key={med.key}
+                ref={(el) => {
+                  if (el && index === currentIndex) {
+                    el.scrollIntoView({
+                      behavior: "smooth",
+                      inline: "center",
+                      block: "nearest",
+                    });
+                  }
+                }}
+                onClick={() => setCurrentIndex(index)}
+                className={`
+          flex-shrink-0 px-5 py-2 sm:py-1 rounded-full cursor-pointer font-semibold text-sm sm:text-base transition-all duration-300
+          ${
+            index === currentIndex
+              ? "bg-gradient-to-r from-rose-400 to-purple-400 text-white shadow-xl scale-105"
+              : "bg-purple-200/30 text-purple-900 hover:bg-purple-300/60 hover:scale-105"
+          }
+        `}
+              >
+                {med.title.replace("Meditação: ", "")}
+              </span>
+            ))}
+          </div>
+          {/* Tailwind esconder scrollbar em todas plataformas */}
+          <style>{`
+            .scrollbar-none::-webkit-scrollbar {
+              display: none;
+            }
+            .scrollbar-none {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+          `}</style>
+        </div>
 
         {/* Card de Meditação */}
         <div
-          className="card-hover bg-gradient-to-br from-rose-200/40 to-purple-200/40 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-rose-300/30 mb-8 cursor-pointer relative"
+          className="card-hover bg-gradient-to-br from-rose-200/40 to-purple-200/40 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-rose-300/30 mb-8 cursor-pointer relative transition-transform duration-500 hover:-translate-y-1 hover:shadow-xl"
           onClick={() => openModal(currentMeditacao.key)}
         >
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
-            {/* Ícone */}
             <div className="lg:w-1/3 flex-shrink-0">
               <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-yellow-400 to-rose-400 rounded-full flex items-center justify-center shadow-2xl">
                 <span className="text-6xl sm:text-5xl">✝️</span>

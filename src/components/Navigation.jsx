@@ -121,7 +121,7 @@ export default function Navigation({
           </div>
 
           {/* Menu Desktop */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden tablet:flex md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection("formacao")}
               className="nav-link text-white/90 hover:text-rose-300 font-medium text-lg"

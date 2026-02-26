@@ -1,3 +1,4 @@
+import { summary } from "framer-motion/client";
 import { getRosarioDoDia, rosarioConteudo } from "../utils/rosario";
 const tipoHoje = getRosarioDoDia();
 const rosarioHoje = rosarioConteudo[tipoHoje];
@@ -172,7 +173,6 @@ export const modalContentData = {
 `,
     summary: `Os discípulos perguntaram a Jesus não por curiosidade, mas por desejo de intimidade. A Quaresma nos convida a fazer a mesma pergunta: onde encontro Cristo em minha vida?`,
   },
-
   "oracao-tema": {
     title: "A Oração Quaresmal",
     content: `
@@ -190,7 +190,6 @@ export const modalContentData = {
   </div>
 `,
   },
-
   "jejum-tema": {
     title: "O Jejum Quaresmal",
     content: `
