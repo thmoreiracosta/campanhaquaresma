@@ -12,6 +12,7 @@ import logoEducarParaCeu from "../assets/logo-educarparaceu.png";
 import logoJuventude from "../assets/logo-juventude.png";
 import logoAVidaDoCatolico from "../assets/logo-avidacatolico.png";
 import logoDomine from "../assets/logo-domine.png";
+import logoViaCrucis from "../assets/logo-viacrucis.png";
 
 
 export const apoiadores = [
@@ -98,5 +99,11 @@ export const apoiadores = [
     name: "Domine Fotografia Religiosa",
     image: logoDomine,
     instagram: "https://www.instagram.com/dominefotografiareligiosa",
+  },
+  {
+    id: 15,
+    name: "Via Crucis Ateliê",
+    image: logoViaCrucis,
+    instagram: "https://www.instagram.com/viacrucisatelie",
   },
 ];
