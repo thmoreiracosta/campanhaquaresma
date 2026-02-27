@@ -11,6 +11,7 @@ import logoFotoSacra from "../assets/logo-fotosacra.png";
 import logoEducarParaCeu from "../assets/logo-educarparaceu.png";
 import logoJuventude from "../assets/logo-juventude.png";
 import logoAVidaDoCatolico from "../assets/logo-avidacatolico.png";
+import logoDomine from "../assets/logo-domine.png";
 
 
 export const apoiadores = [
@@ -91,5 +92,11 @@ export const apoiadores = [
     name: "A vida do Católico",
     image: logoAVidaDoCatolico,
     instagram: "https://www.instagram.com/avidadocatolico",
+  },
+  {
+    id: 14,
+    name: "Domine Fotografia Religiosa",
+    image: logoDomine,
+    instagram: "https://www.instagram.com/dominefotografiareligiosa",
   },
 ];
