@@ -4,9 +4,11 @@ import { useAOS } from "../hooks/useAOS";
 import dores from "../assets/dores.png";
 import viaSacra from "../assets/via-sacra.png";
 import cquaresma from "../assets/cquaresma.png";
+import cquaresma2 from "../assets/cquaresma_2.png";
 import confissao from "../assets/confissao.png";
-import ultimaQuaresma from "../assets/capa-ultimaquaresma.png";
+//import ultimaQuaresma from "../assets/capa-ultimaquaresma.png";
 import robertSarah from "../assets/robertSarah.png";
+import bentoXVI from "../assets/bentoXVI.png";
 
 export default function LentenSubsidies() {
   const inicioQuaresma = new Date("2026-02-22");
@@ -76,7 +78,10 @@ export default function LentenSubsidies() {
       title: "Meditações para 1ª Semana",
       link: "https://drive.google.com/file/d/1DVaRmkVqy-cMLEjGF7V6GhrM_KD3KI7m/view?usp=drive_link",
     },
-    { title: "Meditações para 2ª Semana", link: "https://drive.google.com/file/d/1iHPurS85_MKoSk7KWkjNuA3QKIXIBMlF/view?usp=drive_link" },
+    { 
+      title: "Meditações para 2ª Semana", 
+      link: "https://drive.google.com/file/d/1iHPurS85_MKoSk7KWkjNuA3QKIXIBMlF/view?usp=drive_link" 
+    },
     { title: "Meditações para 3ª Semana", link: "LINK_SEMANA_3" },
     { title: "Meditações para 4ª Semana", link: "LINK_SEMANA_4" },
     { title: "Meditações para 5ª Semana", link: "LINK_SEMANA_5" },
@@ -199,12 +204,13 @@ export default function LentenSubsidies() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-items-center">
-          {[dores, viaSacra, confissao, robertSarah].map((img, index) => {
+          {[dores, viaSacra, confissao, robertSarah, bentoXVI].map((img, index) => {
             const links = [
               "https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link",
               "https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link",
               "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",
               "https://drive.google.com/file/d/1Gcme26Ska5JirXJKJn1WsEJ9SgwGf9F_/view?usp=drive_link",
+              "https://drive.google.com/file/d/1tx0pIYj6G3tl_ej-VjZ-pKurSSmOUUi7/view?usp=drive_link",
             ];
 
             const titles = [
@@ -212,6 +218,7 @@ export default function LentenSubsidies() {
               "Via-Sacra",
               "Manual de Confissão",
               "Homilia Cardeal Robert Sarah",
+              "Bento XVI - Reflexões sobre a oração cristã",
             ];
 
             return (
