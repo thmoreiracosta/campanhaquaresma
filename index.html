@@ -5,7 +5,10 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thmoreiracosta.github.io/campanhaquaresma/" />
+    <meta
+      property="og:url"
+      content="https://thmoreiracosta.github.io/campanhaquaresma/"
+    />
     <meta
       property="og:title"
       content="Campanha da Quaresma 2026 — Mestre, onde moras?"
@@ -34,11 +37,25 @@
       content="https://thmoreiracosta.github.io/campanhaquaresma/og-image.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>      
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-588YL4FTFJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-588YL4FTFJ");
+    </script>
+    <script>
       const hour = new Date().getHours();
-      const defaultTheme = hour >= 18 || hour < 6 ? "dark" : "light";         
-      const savedTheme = localStorage.getItem("theme");       
-      const theme = savedTheme || defaultTheme;          
+      const defaultTheme = hour >= 18 || hour < 6 ? "dark" : "light";
+      const savedTheme = localStorage.getItem("theme");
+      const theme = savedTheme || defaultTheme;
       document.documentElement.classList.add(theme);
     </script>
     <title>Campanha da Quaresma 2026</title>
