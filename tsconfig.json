@@ -9,9 +9,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",    
-    "esModuleInterop": true,    
-    "strict": true
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "strict": true,
+    "allowJs": true
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }
