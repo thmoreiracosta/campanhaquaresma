@@ -8,6 +8,7 @@ import cquaresma2 from "../assets/cquaresma_2.png";
 import confissao from "../assets/confissao.png";
 //import ultimaQuaresma from "../assets/capa-ultimaquaresma.png";
 import robertSarah from "../assets/robertSarah.png";
+import robertSarahII from "../assets/robertSarahII.png";
 import bentoXVI from "../assets/bentoXVI.png";
 
 export default function LentenSubsidies() {
@@ -82,7 +83,10 @@ export default function LentenSubsidies() {
       title: "Meditações para 2ª Semana", 
       link: "https://drive.google.com/file/d/1iHPurS85_MKoSk7KWkjNuA3QKIXIBMlF/view?usp=drive_link" 
     },
-    { title: "Meditações para 3ª Semana", link: "LINK_SEMANA_3" },
+    { 
+      title: "Meditações para 3ª Semana", 
+      link: "https://drive.google.com/file/d/1ATplCgMTJjJSYr73YQOwLTd-RwtWyI9-/view?usp=drive_link" 
+    },
     { title: "Meditações para 4ª Semana", link: "LINK_SEMANA_4" },
     { title: "Meditações para 5ª Semana", link: "LINK_SEMANA_5" },
     { title: "Meditações para Semana Santa", link: "LINK_SEMANA_6" },
@@ -204,13 +208,14 @@ export default function LentenSubsidies() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-items-center">
-          {[dores, viaSacra, confissao, robertSarah, bentoXVI].map((img, index) => {
+          {[dores, viaSacra, confissao, robertSarah, bentoXVI, robertSarahII].map((img, index) => {
             const links = [
               "https://drive.google.com/file/d/1zoqes_Ynuuu48M_SM-mK9yb9KF5WojkI/view?usp=drive_link",
               "https://drive.google.com/file/d/1pwC_WfZ9i1rhl2aE9tQKuf011OYJ957V/view?usp=drive_link",
               "https://drive.google.com/file/d/1v9iXRKARivRtLbrUJbzY58ub9fRn3Qne/view?usp=drive_link",
               "https://drive.google.com/file/d/1Gcme26Ska5JirXJKJn1WsEJ9SgwGf9F_/view?usp=drive_link",
               "https://drive.google.com/file/d/1tx0pIYj6G3tl_ej-VjZ-pKurSSmOUUi7/view?usp=drive_link",
+              "https://drive.google.com/file/d/1hi57HjQ1cRytw64kl9Z5GqvJ76dz6y-a/view?usp=drive_link",
             ];
 
             const titles = [
@@ -219,6 +224,7 @@ export default function LentenSubsidies() {
               "Manual de Confissão",
               "Homilia Cardeal Robert Sarah",
               "Bento XVI - Reflexões sobre a oração cristã",
+              "Robert Sarah - A Vida Espiritual",
             ];
 
             return (
